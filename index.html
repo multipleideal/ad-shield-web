@@ -20,7 +20,7 @@
         /* HERO SECTION */
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 60px 20px 40px 20px;
             max-width: 800px;
         }
 
@@ -36,18 +36,22 @@
             font-size: 1.2rem;
             color: #aaaaaa;
             margin-bottom: 40px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* MOCKUP (Using CSS Shapes to look like a phone) */
+        /* PHONE MOCKUP */
         .phone-mockup {
             width: 280px;
             height: 550px;
             background: #111;
             border: 4px solid #333;
             border-radius: 30px;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             position: relative;
-            box-shadow: 0 0 50px rgba(0, 255, 127, 0.2);
+            box-shadow: 0 0 50px rgba(0, 255, 127, 0.15);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -70,9 +74,9 @@
         /* FEATURES GRID */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            max-width: 800px;
+            max-width: 1000px;
             width: 100%;
             padding: 20px;
             margin-bottom: 40px;
@@ -80,17 +84,24 @@
 
         .card {
             background: #111;
-            padding: 20px;
-            border-radius: 12px;
-            border: 1px solid #333;
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid #222;
             text-align: center;
+            transition: transform 0.2s;
         }
 
-        .card h3 { color: #00FF7F; margin-top: 0; }
-        .card p { color: #888; font-size: 0.9rem; }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #333;
+        }
+
+        .card h3 { color: #00FF7F; margin-top: 0; font-size: 1.2rem; }
+        .card p { color: #999; font-size: 0.95rem; line-height: 1.5; }
 
         /* DOWNLOAD BUTTON */
         .btn-download {
+            display: inline-block;
             background-color: #00FF7F;
             color: #000;
             padding: 18px 40px;
@@ -100,6 +111,7 @@
             border-radius: 50px;
             transition: transform 0.2s, box-shadow 0.2s;
             box-shadow: 0 0 20px rgba(0, 255, 127, 0.4);
+            margin-bottom: 15px; /* Spacing between button and version text */
         }
 
         .btn-download:hover {
@@ -107,11 +119,62 @@
             box-shadow: 0 0 30px rgba(0, 255, 127, 0.6);
         }
 
+        .version-text {
+            color: #666; 
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* TELEGRAM SECTION */
+        .telegram-section {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .btn-telegram {
+            display: inline-block;
+            background-color: #0088cc;
+            color: #ffffff;
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background 0.2s;
+        }
+
+        .btn-telegram:hover { background-color: #0077b5; }
+
+        .btn-telegram-outline {
+            display: inline-block;
+            background-color: transparent;
+            color: #0088cc;
+            border: 2px solid #0088cc;
+            padding: 10px 23px;
+            margin: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.2s;
+        }
+
+        .btn-telegram-outline:hover {
+            background-color: rgba(0, 136, 204, 0.1);
+        }
+
         footer {
             margin-top: auto;
             padding: 20px;
-            color: #555;
+            color: #444;
             font-size: 0.8rem;
+            border-top: 1px solid #111;
+            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
@@ -119,35 +182,57 @@
 
     <header>
         <h1>AD SHIELD</h1>
-        <p class="subtitle">The Ultimate Ad Blocker & Data Saver for Android</p>
+        <p class="subtitle">The Ultimate Ad Blocker & Deep Data Saver for Android, save up to 60% of your internet data consumption cost</p>
         
-        <a href="https://github.com/multipleideal/ad-shield/releases/latest/download/app-release.apk" class="btn-download">
+        <a href="app-release.apk" class="btn-download">
             DOWNLOAD APK
         </a>
-        <p style="margin-top: 10px; color: #666; font-size: 0.8rem;">Version 1.0 • Android 8.0+</p>
+        <div class="version-text">Version 1.0 • Android 5.0+</div>
     </header>
 
     <div class="phone-mockup">
         <div class="phone-screen">
-            <h2 style="color:#00FF7F">PROTECTED</h2>
-            <p style="color:#fff">Ads Blocked: 1,402</p>
-            <p style="color:#fff">Data Saved: 45 MB</p>
+            <h2 style="color:#00FF7F; margin-bottom: 5px;">PROTECTED</h2>
+            <div style="height: 1px; width: 50px; background: #333; margin-bottom: 20px;"></div>
+            
+            <p style="color:#fff; font-size: 1.2rem; margin: 5px 0;">Ads Blocked</p>
+            <h3 style="color:#00FF7F; font-size: 1.8rem; margin: 0 0 20px 0;">569,764+</h3>
+            
+            <p style="color:#fff; font-size: 1.2rem; margin: 5px 0;">Data Saved</p>
+            <h3 style="color:#00FF7F; font-size: 1.8rem; margin: 0;">74 GB</h3>
         </div>
     </div>
 
     <div class="features">
         <div class="card">
             <h3>🚫 Block Ads</h3>
-            <p>Removes popups, banners, and video ads instantly.</p>
+            <p>Removes annoying popups, banners, and video ads instantly from apps and browsers.</p>
         </div>
         <div class="card">
-            <h3>💰 Save Data</h3>
-            <p>Save up to 60% of your mobile data plan.</p>
+            <h3>💰 Deep Data Saver</h3>
+            <p>Stops data-heavy trackers before they load, saving you up to 60% on mobile data.</p>
         </div>
         <div class="card">
-            <h3>🔒 Encrypted</h3>
-            <p>Military-grade encryption for your DNS queries.</p>
+            <h3>🔒 Military Encryption</h3>
+            <p>Your DNS queries are encrypted over HTTPS (DoH), keeping your browsing history private.</p>
         </div>
+        <div class="card">
+            <h3>🚀 3X Faster Speed</h3>
+            <p>By blocking resource-heavy ads, web pages and apps load significantly faster.</p>
+        </div>
+        <div class="card">
+            <h3>🔋 Battery Saver</h3>
+            <p>Less data processing means less CPU usage, extending your phone's battery life.</p>
+        </div>
+        <div class="card">
+            <h3>🕵️ No Logs Policy</h3>
+            <p>We do not track, store, or sell your data. Your privacy is our #1 priority.</p>
+        </div>
+    </div>
+
+    <div class="telegram-section">
+        <a href="https://t.me/ADShieldChannel" class="btn-telegram">Join us on Telegram</a>
+        <a href="https://t.me/ADShieldSupport" class="btn-telegram-outline">Contact Support</a>
     </div>
 
     <footer>
