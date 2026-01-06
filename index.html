@@ -47,7 +47,8 @@
         /* PHONE MOCKUP */
         .phone-mockup {
             width: 280px;
-            height: 580px; /* Slightly taller to fit 3 stats comfortably */
+            /* Increased height to fit title and button */
+            height: 660px; 
             background: #111;
             border: 4px solid #333;
             border-radius: 30px;
@@ -120,6 +121,24 @@
         .btn-download:hover {
             transform: scale(1.05);
             box-shadow: 0 0 30px rgba(0, 255, 127, 0.6);
+        }
+
+        /* Small version of download button for inside phone */
+        .btn-download-small {
+            display: inline-block;
+            background-color: #00FF7F;
+            color: #000;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+        .btn-download-small:hover {
+            transform: scale(1.05);
+            background-color: #00cc66;
         }
 
         .version-text {
@@ -279,7 +298,9 @@
 
     <div class="phone-mockup">
         <div class="phone-screen">
-            <h2 style="color:#00FF7F; margin-bottom: 5px;">PROTECTED</h2>
+            <h2 style="color:#ffffff; margin-bottom: 5px; font-size: 1.8rem;">AD SHIELD</h2>
+            <p style="color:#00FF7F; margin-top: 0; margin-bottom: 15px; font-weight:bold;">● SYSTEM PROTECTED</p>
+            
             <div style="height: 1px; width: 50px; background: #333; margin-bottom: 20px;"></div>
             
             <p style="color:#fff; font-size: 1.1rem; margin: 5px 0;">App Users</p>
@@ -290,6 +311,10 @@
             
             <p style="color:#fff; font-size: 1.1rem; margin: 5px 0;">Data Saved</p>
             <h3 style="color:#00FF7F; font-size: 1.6rem; margin: 0;">863.59TB+</h3>
+
+            <a href="AD-Shield-App-apk.zip" class="btn-download-small">
+                DOWNLOAD
+            </a>
         </div>
     </div>
 
