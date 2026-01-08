@@ -20,7 +20,7 @@
         /* HERO SECTION */
         header {
             text-align: center;
-            padding: 20px 20px 20px 20px; /* Reduced top padding since Telegram is there */
+            padding: 20px 20px 20px 20px;
             max-width: 800px;
             display: flex;
             flex-direction: column;
@@ -126,9 +126,11 @@
             margin-bottom: 0;
         }
 
-        /* TELEGRAM SECTION MOVED TO TOP */
+        /* TELEGRAM SECTION FIXED: SIDE BY SIDE */
         .telegram-section {
             display: flex;
+            flex-direction: row; /* Forces side-by-side */
+            flex-wrap: nowrap;   /* Prevents wrapping to next line */
             gap: 15px;
             justify-content: center;
             margin-top: 10px;
@@ -137,7 +139,7 @@
         }
 
         .btn-telegram, .btn-telegram-outline {
-            flex: 1;
+            flex: 1; /* Makes them grow equally */
             max-width: 220px;
             text-align: center;
             padding: 12px 0;
@@ -146,6 +148,7 @@
             text-decoration: none;
             border-radius: 50px;
             transition: all 0.2s;
+            white-space: nowrap; /* Prevents text from breaking */
         }
 
         .btn-telegram {
@@ -287,9 +290,16 @@
             text-align: center;
         }
 
-        @media (max-width: 480px) {
-            .telegram-section { flex-direction: column; align-items: center; }
-            .btn-telegram, .btn-telegram-outline { width: 100%; max-width: none; }
+        /* MEDIA QUERY FOR SMALLER SCREENS */
+        /* Ensures buttons don't shrink too much on very small phones */
+        @media (max-width: 400px) {
+            .telegram-section {
+                 gap: 8px; /* Reduce gap on small screens */
+            }
+            .btn-telegram, .btn-telegram-outline {
+                font-size: 0.8rem; /* Smaller text */
+                padding: 10px 0;
+            }
         }
     </style>
 </head>
@@ -345,7 +355,7 @@
             <p style="color:#fff; font-size: 1.1rem; margin: 5px 0;">Data Saved</p>
             <h3 style="color:#00FF7F; font-size: 1.6rem; margin: 0;">863.59TB+</h3>
             
-            <p class="warning-text" style="font-size: 0.75rem; margin-top: 20px; margin-bottom: 5px;">⚠️ Ignore "Harmful" warning & click "Download Anyway"</p>
+            <p class="warning-text" style="font-size: 0.75rem; margin-top: 20px; margin-bottom: 5px; max-width: 90%;">⚠️ Browser Warning? Don't worry, it's safe! <br>Click "Download Anyway" if Chrome alerts you.</p>
             
             <a href="AD-Shield.apk" class="btn-download-small">DOWNLOAD NOW</a>
         </div>
