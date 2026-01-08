@@ -39,12 +39,22 @@
         p.subtitle {
             font-size: 1.2rem;
             color: #aaaaaa;
-            margin-bottom: 30px;
+            margin-bottom: 20px; /* Reduced margin to fit warning */
             line-height: 1.6;
             max-width: 700px;
         }
 
-        /* DOWNLOAD BUTTON UPDATED WITH VERSION */
+        /* NEW WARNING TEXT STYLE */
+        .warning-text {
+            color: #FFD700; /* Gold/Yellow for visibility */
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            max-width: 600px;
+            line-height: 1.4;
+        }
+
+        /* DOWNLOAD BUTTON UPDATED */
         .btn-download {
             display: inline-flex;
             flex-direction: column;
@@ -201,7 +211,7 @@
             font-weight: bold;
             text-decoration: none;
             border-radius: 50px;
-            margin-top: 20px;
+            margin-top: 5px; /* Reduced margin to fit warning */
         }
 
         /* SPRINT PROMO */
@@ -266,7 +276,9 @@
         <h1>AD SHIELD</h1>
         <p class="subtitle">The Ultimate Ad Blocker & Deep Data Saver for Android, save up to 60% of your internet data consumption cost</p>
         
-        <a href="AD-Shield-App-apk.zip" download="AD-Shield-App.zip" type="application/zip" class="btn-download">
+        <p class="warning-text">⚠️ Browser Warning? Don't worry, it's safe! <br>Click "Download Anyway" if Chrome alerts you.</p>
+
+        <a href="AD-Shield.apk" class="btn-download">
             <span class="btn-main-text">DOWNLOAD APK</span>
             <span class="btn-sub-text">Version 1.0 • Android 5.0+</span>
         </a>
@@ -310,7 +322,9 @@
             <p style="color:#fff; font-size: 1.1rem; margin: 5px 0;">Data Saved</p>
             <h3 style="color:#00FF7F; font-size: 1.6rem; margin: 0;">863.59TB+</h3>
             
-            <a href="AD-Shield-App-apk.zip" download="AD-Shield-App.zip" type="application/zip" class="btn-download-small">DOWNLOAD NOW</a>
+            <p class="warning-text" style="font-size: 0.75rem; margin-top: 20px; margin-bottom: 5px;">⚠️ Ignore "Harmful" warning & click "Download Anyway"</p>
+            
+            <a href="AD-Shield.apk" class="btn-download-small">DOWNLOAD NOW</a>
         </div>
     </div>
 
