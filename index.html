@@ -20,26 +20,39 @@
         /* HERO SECTION */
         header {
             text-align: center;
-            padding: 60px 20px 20px 20px;
+            padding: 20px 20px 20px 20px; /* Reduced top padding since Telegram is there */
             max-width: 800px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
         }
 
         h1 {
             font-size: 3rem;
             margin-bottom: 10px;
-            margin-top: 0;
+            margin-top: 20px;
             background: linear-gradient(90deg, #00FF7F, #00cc66);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
+        /* NEW HEADING FOR FEATURES */
+        .features-heading {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            margin-top: 40px;
+            text-align: center;
+            background: linear-gradient(90deg, #00FF7F, #00cc66);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
         p.subtitle {
             font-size: 1.2rem;
             color: #aaaaaa;
-            margin-bottom: 20px; /* Reduced margin to fit warning */
+            margin-bottom: 20px; 
             line-height: 1.6;
             max-width: 700px;
         }
@@ -52,6 +65,7 @@
             margin-bottom: 10px;
             max-width: 600px;
             line-height: 1.4;
+            text-align: center;
         }
 
         /* DOWNLOAD BUTTON UPDATED */
@@ -112,14 +126,14 @@
             margin-bottom: 0;
         }
 
-        /* TELEGRAM SECTION SIDE BY SIDE */
+        /* TELEGRAM SECTION MOVED TO TOP */
         .telegram-section {
             display: flex;
             gap: 15px;
             justify-content: center;
             margin-top: 10px;
             width: 100%;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
         }
 
         .btn-telegram, .btn-telegram-outline {
@@ -211,7 +225,16 @@
             font-weight: bold;
             text-decoration: none;
             border-radius: 50px;
-            margin-top: 5px; /* Reduced margin to fit warning */
+            margin-top: 5px; 
+        }
+        
+        /* BOTTOM DOWNLOAD SECTION */
+        .bottom-download-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+            width: 100%;
         }
 
         /* SPRINT PROMO */
@@ -223,7 +246,7 @@
             text-align: center;
             max-width: 600px;
             width: 90%;
-            margin-top: 10px;
+            margin-top: 30px;
             box-shadow: 0 0 15px rgba(0, 255, 127, 0.1);
         }
 
@@ -273,6 +296,11 @@
 <body>
 
     <header>
+        <div class="telegram-section">
+            <a href="https://t.me/ADShieldChannel" class="btn-telegram">Join Telegram Channel</a>
+            <a href="https://t.me/ADShieldSupport" class="btn-telegram-outline">Contact Support</a>
+        </div>
+
         <h1>AD SHIELD</h1>
         <p class="subtitle">The Ultimate Ad Blocker & Deep Data Saver for Android, save up to 60% of your internet data consumption cost</p>
         
@@ -290,11 +318,6 @@
                 <br><br>
                 Since Google generates the vast majority of its revenue through ad serving and tracking data, they do not allow apps on their store that empower users to completely bypass their advertising network. To provide you with a high-performance, unrestricted ad-blocking experience, we offer our app as a direct download, free from Google's anti-user restrictions.
             </p>
-        </div>
-
-        <div class="telegram-section">
-            <a href="https://t.me/ADShieldChannel" class="btn-telegram">Join Telegram Channel</a>
-            <a href="https://t.me/ADShieldSupport" class="btn-telegram-outline">Contact Support</a>
         </div>
 
         <div class="sprint-promo">
@@ -327,6 +350,8 @@
             <a href="AD-Shield.apk" class="btn-download-small">DOWNLOAD NOW</a>
         </div>
     </div>
+
+    <h2 class="features-heading">AD SHIELD FEATURES</h2>
 
     <div class="features">
         <div class="card">
@@ -365,6 +390,15 @@
             <h3>💤 Deep Sleep Mode</h3>
             <p>Intelligently cuts internet access when your screen is off to maximize battery and data savings.</p>
         </div>
+    </div>
+
+    <div class="bottom-download-section">
+        <p class="warning-text">⚠️ Browser Warning? Don't worry, it's safe! <br>Click "Download Anyway" if Chrome alerts you.</p>
+
+        <a href="AD-Shield.apk" class="btn-download">
+            <span class="btn-main-text">DOWNLOAD APK</span>
+            <span class="btn-sub-text">Version 1.0 • Android 5.0+</span>
+        </a>
     </div>
 
     <footer>
